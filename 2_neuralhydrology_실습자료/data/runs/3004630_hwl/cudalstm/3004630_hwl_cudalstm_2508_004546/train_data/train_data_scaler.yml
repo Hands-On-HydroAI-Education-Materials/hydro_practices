@@ -1,0 +1,34 @@
+xarray_feature_scale:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    3003430_hrf:
+      dims: []
+      attrs: {}
+      data: 1.0522712469100952
+    3004630_hwl:
+      dims: []
+      attrs: {}
+      data: 0.26647520065307617
+    yd_hoflw:
+      dims: []
+      attrs: {}
+      data: 76.7552261352539
+xarray_feature_center:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    3003430_hrf:
+      dims: []
+      attrs: {}
+      data: 0.14009276032447815
+    3004630_hwl:
+      dims: []
+      attrs: {}
+      data: 0.8910573124885559
+    yd_hoflw:
+      dims: []
+      attrs: {}
+      data: 13.486254692077637

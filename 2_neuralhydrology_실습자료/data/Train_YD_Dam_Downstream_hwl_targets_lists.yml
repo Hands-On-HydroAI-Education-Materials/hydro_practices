@@ -1,0 +1,145 @@
+YD_Dam_Downstram_hwl_inputs:
+ - 3004630_hwl:
+    target_code: "3004630_hwl"
+    target_name: "진안군(감동교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: "3003430_hrf"
+    input_hwl_code:        
+ - 3002655_hwl:
+    target_code: "3002655_hwl"
+    target_name: "무주군(대티교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: "3003430_hrf"
+    input_hwl_code: "3004630_hwl" 
+ - 3003620_hwl:
+    target_code: "3003620_hwl"
+    target_name: "무주군(신촌농2교)(무주남대천)"
+    input_hoflw_code: 
+    input_hrf_code: "3003450_hrf"
+    input_hwl_code:  
+ - 3003660_hwl: 
+    target_code: "3003660_hwl"
+    target_name: "무주군(여의교)(무주남대천)"
+    input_hoflw_code: 
+    input_hrf_code: "3003431_hrf"
+    input_hwl_code: "3003620_hwl" 
+ - 3003680_hwl: 
+    target_code: "3003680_hwl"
+    target_name: "무주군(취수장)(무주남대천)"
+    input_hoflw_code: "mj_hoflw"
+    input_hrf_code: ["3003452_hrf", "8000701_hrf"]
+    input_hwl_code: ["3003660_hwl", "3003620_hwl"]
+ - 3004620_hwl: 
+    target_code: "3004620_hwl"
+    target_name: "금산군(적벽교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: ["3003450_hrf", "3003431_hrf", "3003452_hrf", "8000701_hrf"]
+    input_hwl_code: ["3002655_hwl", "3003680_hwl"]
+ - 9000218_hwl: 
+    target_code: "9000218_hwl"
+    target_name: "금산군(제원대교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: ["3003450_hrf", "3003431_hrf", "3003452_hrf", "8000701_hrf", "3004430_hrf"]
+    input_hwl_code: "3004620_hwl"
+ - 3004670_hwl: 
+    target_code: "3004670_hwl"
+    target_name: "금산군(음대교)(봉황천)"
+    input_hoflw_code: 
+    input_hrf_code: "3004430_hrf"
+    input_hwl_code: 
+ - 3008670_hwl: 
+    target_code: "3008670_hwl"
+    target_name: "금산군(제원교)(봉황천)"
+    input_hoflw_code: 
+    input_hrf_code: "3004430_hrf"
+    input_hwl_code: "3004670_hwl"
+ - 3004650_hwl: 
+    target_code: "3004650_hwl"
+    target_name: "영동군(호탄리)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: "3004430_hrf"
+    input_hwl_code: ["9000218_hwl", "3008670_hwl", "3004620_hwl"]
+ - 3004690_hwl: 
+    target_code: "3004690_hwl"
+    target_name: "영동군(양강교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: ["8000605_hrf", "3004440_hrf"]
+    input_hwl_code: "3004650_hwl"
+ - 9000216_hwl: 
+    target_code: "9000216_hwl"
+    target_name: "영동군(초강교)(영동천)"
+    input_hoflw_code: 
+    input_hrf_code: ["8000605_hrf", "3004440_hrf"]
+    input_hwl_code: 
+ - 3005667_hwl: 
+    target_code: "3005667_hwl"
+    target_name: "영동군(백화교)(석천)"
+    input_hoflw_code: 
+    input_hrf_code: ["3005440_hrf", "8000834_hrf"]
+    input_hwl_code: 
+ - 3005680_hwl: 
+    target_code: "3005680_hwl"
+    target_name: "영동군(율리)(초강)"
+    input_hoflw_code: 
+    input_hrf_code: "3005440_hrf"
+    input_hwl_code: "3005667_hwl"
+ - 3005690_hwl: 
+    target_code: "3005690_hwl"
+    target_name: "영동군(신천교)(초강)"
+    input_hoflw_code: 
+    input_hrf_code: "3005440_hrf"
+    input_hwl_code: "3005680_hwl"
+ - 3006680_hwl: 
+    target_code: "3006680_hwl"
+    target_name: "옥천군(이원대교)(본류)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: "3005430_hrf"
+    input_hwl_code: ["3004690_hwl", "9000216_hwl", "3005690_hwl", "3004650_hwl"]
+ - 3007610_hwl: 
+    target_code: "3007610_hwl"
+    target_name: "보은군(산성교)(보청천)"
+    input_hoflw_code: 
+    input_hrf_code: ["3007430_hrf", "3007470_hrf"]
+    input_hwl_code: 
+ - 3007620_hwl: 
+    target_code: "3007620_hwl"
+    target_name: "보은군(이평교)(보청천)"
+    input_hoflw_code:
+    input_hrf_code: ["3007470_hrf", "3007430_hrf"]
+    input_hwl_code: "3007610_hwl"
+ - 3007655_hwl: 
+    target_code: "3007655_hwl"
+    target_name: "보은군(대양교)(보청천)"
+    input_hoflw_code:
+    input_hrf_code: "3007440_hrf"
+    input_hwl_code: "3007620_hwl"
+ - 3007640_hwl: 
+    target_code: "3007640_hwl"
+    target_name: "보은군(탄부교)(삼가천)"
+    input_hoflw_code: 
+    input_hrf_code: "3007487_hrf"
+    input_hwl_code:
+ - 3007650_hwl: 
+    target_code: "3007650_hwl"
+    target_name: "보은군(기대교)(보청천)"
+    input_hoflw_code:
+    input_hrf_code: "3007440_hrf"
+    input_hwl_code: ["3007655_hwl", "3007640_hwl"]
+ - 3007660_hwl: 
+    target_code: "3007660_hwl"
+    target_name: "옥천군(산계교)(보청천)"
+    input_hoflw_code:
+    input_hrf_code: "3007475_hrf"
+    input_hwl_code: "3007650_hwl"
+ - 3008666_hwl: 
+    target_code: "3008666_hwl"
+    target_name: "옥천군(옥각교)(소옥천)"
+    input_hoflw_code:
+    input_hrf_code: ["8000604_hrf", "3008440_hrf", "3008450_hrf"]
+    input_hwl_code: 
+ - dc_hiflw: 
+    target_code: "dc_hiflw"
+    target_name: "대청댐(유입량)"
+    input_hoflw_code: "yd_hoflw"
+    input_hrf_code: ["3007475_hrf", "8000604_hrf", "3008440_hrf", "3008450_hrf"]
+    input_hwl_code: ["3006680_hwl", "3007660_hwl", "3008666_hwl"]

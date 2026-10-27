@@ -1,0 +1,58 @@
+2026-08-25 00:45:46,717: Logging to /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/output.log initialized.
+2026-08-25 00:45:46,718: ### Folder structure created at /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546
+2026-08-25 00:45:46,719: ### Run configurations for 3004630_hwl_cudalstm
+2026-08-25 00:45:46,720: batch_size: 256
+2026-08-25 00:45:46,721: clip_gradient_norm: 1
+2026-08-25 00:45:46,722: clip_targets_to_zero: ['3004630_hwl']
+2026-08-25 00:45:46,723: data_dir: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/training_data
+2026-08-25 00:45:46,723: dataset: hourlycsv
+2026-08-25 00:45:46,724: device: cuda:0
+2026-08-25 00:45:46,725: dynamic_inputs: ['yd_hoflw', '3003430_hrf']
+2026-08-25 00:45:46,726: epochs: 5
+2026-08-25 00:45:46,726: experiment_name: 3004630_hwl_cudalstm
+2026-08-25 00:45:46,727: forcings: ['hourly']
+2026-08-25 00:45:46,728: head: regression
+2026-08-25 00:45:46,728: hidden_size: 128
+2026-08-25 00:45:46,729: initial_forget_bias: 3
+2026-08-25 00:45:46,729: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2026-08-25 00:45:46,730: log_interval: 5
+2026-08-25 00:45:46,731: log_n_figures: 1
+2026-08-25 00:45:46,731: log_tensorboard: False
+2026-08-25 00:45:46,733: loss: MSE
+2026-08-25 00:45:46,733: metrics: ['NSE']
+2026-08-25 00:45:46,735: model: cudalstm
+2026-08-25 00:45:46,735: num_workers: 0
+2026-08-25 00:45:46,735: optimizer: Adam
+2026-08-25 00:45:46,736: output_activation: linear
+2026-08-25 00:45:46,737: output_dropout: 0.4
+2026-08-25 00:45:46,737: predict_last_n: 1
+2026-08-25 00:45:46,738: run_dir: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546
+2026-08-25 00:45:46,738: save_weights_every: 5
+2026-08-25 00:45:46,739: seq_length: 720
+2026-08-25 00:45:46,739: target_variables: ['3004630_hwl']
+2026-08-25 00:45:46,740: test_basin_file: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-08-25 00:45:46,740: test_end_date: 2023-09-30 00:00:00
+2026-08-25 00:45:46,741: test_start_date: 2021-10-01 00:00:00
+2026-08-25 00:45:46,741: train_basin_file: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-08-25 00:45:46,742: train_end_date: 2020-09-30 00:00:00
+2026-08-25 00:45:46,743: train_start_date: 2014-10-01 00:00:00
+2026-08-25 00:45:46,743: validate_every: 5
+2026-08-25 00:45:46,744: validate_n_random_basins: 1
+2026-08-25 00:45:46,744: validation_basin_file: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-08-25 00:45:46,745: validation_end_date: 2021-09-30 00:00:00
+2026-08-25 00:45:46,745: validation_start_date: 2020-10-01 00:00:00
+2026-08-25 00:45:46,746: number_of_basins: 1
+2026-08-25 00:45:46,746: train_dir: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/train_data
+2026-08-25 00:45:46,747: img_log_dir: /home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/img_log
+2026-08-25 00:45:46,786: ### Device cuda:0 will be used for training
+2026-08-25 00:45:46,788: Loading basin data into xarray data set.
+2026-08-25 00:45:46,961: Create lookup table and convert to pytorch tensor
+2026-08-25 00:46:03,609: Epoch 1 average loss: avg_loss: 0.11709, avg_total_loss: 0.11709
+2026-08-25 00:46:15,345: Epoch 2 average loss: avg_loss: 0.03055, avg_total_loss: 0.03055
+2026-08-25 00:46:27,073: Epoch 3 average loss: avg_loss: 0.02861, avg_total_loss: 0.02861
+2026-08-25 00:46:38,875: Epoch 4 average loss: avg_loss: 0.02517, avg_total_loss: 0.02517
+2026-08-25 00:46:50,700: Epoch 5 average loss: avg_loss: 0.02524, avg_total_loss: 0.02524
+2026-08-25 00:46:52,250: Epoch 5 average validation loss: 0.21052 -- Median validation metrics: avg_loss: 0.21052, NSE: -0.61157
+2026-08-25 00:46:52,441: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/model_epoch005.pt
+2026-08-25 00:47:53,173: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/model_epoch005.pt
+2026-08-25 00:48:12,722: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2508_004546/model_epoch005.pt
