@@ -1,0 +1,26 @@
+# Binder(mybinder.org) 실행 환경: 실행 시 자동으로 설치됩니다.
+# Binder에는 GPU가 없으므로 CPU 전용 PyTorch를 설치합니다.
+name: hydro-practices
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - ruamel.yaml
+  - xarray
+  - netcdf4
+  - h5py
+  - numba
+  - tqdm
+  - tensorboard
+  - pip
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cpu
+    - torch
+    - lightning
+    - neuralhydrology==1.13.0

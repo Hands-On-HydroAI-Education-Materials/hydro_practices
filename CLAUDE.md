@@ -15,7 +15,11 @@ Hands-on teaching materials (Korean-language) for hydrology + deep learning. It 
 
 ## Dependencies
 
-There is no requirements file. The notebooks import `torch`, `lightning`, `matplotlib`, `seaborn`, `pandas`, `pyyaml`, and `neuralhydrology`, plus `tensorboard`. The run configs record `neuralhydrology` version 1.13.0, and training expects a CUDA GPU (`device: cuda:0`). In the local conda env `hydro`, `neuralhydrology` and `jupyter` are not installed right now.
+Two environment files exist, one per hosted launcher (both linked from README badges, both open the repo root in JupyterLab):
+- `binder/environment.yml` (mybinder.org): the real runtime. conda-forge stack plus pip installs of CPU-only `torch` (via `--extra-index-url https://download.pytorch.org/whl/cpu`), `lightning`, and `neuralhydrology==1.13.0`. Binder has no GPU.
+- `.nblink/environment.yml` (notebook.link): runs in the browser via WebAssembly, using the emscripten-forge channel. PyTorch, Lightning, and NeuralHydrology have no WASM builds, so they are deliberately left out; adding them would break the environment solve. notebook.link is for viewing only.
+
+Device handling: the neuralhydrology notebook sets `device = "cuda:0" if torch.cuda.is_available() else "cpu"` and writes it into the config. The Lightning `Trainer`s in Examples 2 and 3 use the default `accelerator="auto"`, so they fall back to CPU on their own.
 
 To execute a notebook headlessly:
 ```bash
@@ -38,5 +42,6 @@ The notebook runs this flow in order:
 
 ## Gotchas
 
-- **Hardcoded absolute paths** point to `/home/neuralriverops/neuralriverops/hydro_practices/...`, a different machine. They appear in `basin_dir`/`basin_txt` in the neuralhydrology notebook, in the `tensorboard --logdir` cell in Example-3, and in every committed `config.yml` and `Train_Overwrite.yml`. The local checkout is `/home/hydro/research/edu/hydro_practices`. Fix these paths before running anything.
+- The notebooks build paths relative to their own directory (`Path.cwd()`). The committed `config.yml` files under `data/runs/` and the `Train_Overwrite.yml` template still contain absolute paths from the original machine (`/home/neuralriverops/...`). The notebook overwrites the path keys before each run.
+- `dataset: hourlycsv` is not registered in upstream `neuralhydrology` 1.13.0 (built-ins: `camels_*`, `hourly_camels_us`, `generic`, `lamah_*`, `caravan`). `start_run` fails unless a custom dataset class is registered with `neuralhydrology.datasetzoo.register_dataset("hourlycsv", ...)`.
 - `data/runs/` contains committed example run outputs, including `.pt` weights. New training runs add more timestamped directories there.
