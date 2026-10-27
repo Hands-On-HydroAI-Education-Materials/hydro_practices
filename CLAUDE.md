@@ -16,7 +16,7 @@ Hands-on teaching materials (Korean-language) for hydrology + deep learning. It 
 ## Dependencies
 
 Two environment files exist, one per hosted launcher (both linked from README badges, both open the repo root in JupyterLab):
-- `binder/environment.yml` (mybinder.org): the real runtime. conda-forge stack plus pip installs of CPU-only `torch` (via `--extra-index-url https://download.pytorch.org/whl/cpu`), `lightning`, and `neuralhydrology==1.13.0`. Binder has no GPU.
+- `binder/environment.yml` (mybinder.org): the real runtime. conda-forge stack plus pip installs of CPU-only `torch` (via `--extra-index-url https://download.pytorch.org/whl/cpu`), `lightning`, and NeuralHydrology from the fork `git+https://github.com/realtime-dam-operation-using-AI/neuralhydrology.git` (not PyPI). Binder has no GPU. `jupyter-server-proxy` is there so the TensorBoard cell in Example-3 can be reached at `<JUPYTERHUB_SERVICE_PREFIX>/proxy/6006/` (the cell sets `TENSORBOARD_PROXY_URL` before `%tensorboard`).
 - `.nblink/environment.yml` (notebook.link): runs in the browser via WebAssembly, using the emscripten-forge channel. PyTorch, Lightning, and NeuralHydrology have no WASM builds, so they are deliberately left out; adding them would break the environment solve. notebook.link is for viewing only.
 
 Device handling: the neuralhydrology notebook sets `device = "cuda:0" if torch.cuda.is_available() else "cpu"` and writes it into the config. The Lightning `Trainer`s in Examples 2 and 3 use the default `accelerator="auto"`, so they fall back to CPU on their own.
@@ -32,7 +32,7 @@ Run it from the notebook's own directory. The neuralhydrology notebook uses rela
 The notebook runs this flow in order:
 
 1. **Source data**: `data/training_data/time_series/Train_YD_Dam_Downstream_hourly.csv` is one wide hourly CSV for 2014-10 onward. Columns are station codes with a suffix: `_hwl` = water level, `_hrf` = rainfall, `_hoflw`/`_hiflw` = dam outflow/inflow (`yd` = Yongdam, `mj` = Muju, `dc` = Daecheong).
-2. **Per-target split**: the notebook picks `input` and `target` column lists. It writes `input/hourly/<target>/...csv` and `target/hourly/<target>/...csv` under `training_data/time_series/`. This layout is what the `dataset: hourlycsv` loader expects. `hourlycsv` is not one of upstream NeuralHydrology's built-in datasets, so it probably comes from a custom or forked build.
+2. **Per-target split**: the notebook picks `input` and `target` column lists. It writes `input/hourly/<target>/...csv` and `target/hourly/<target>/...csv` under `training_data/time_series/`. This layout is what the `dataset: hourlycsv` loader expects. `hourlycsv` is not one of upstream NeuralHydrology's built-in datasets; it is registered by the realtime-dam-operation-using-AI fork (`neuralhydrology/datasetzoo/hourlycsv.py`).
 3. **Basin file**: `data/Train_YD_Dam_Downstream.txt` holds a single "basin" ID, `Train_YD_Dam_Downstream`. The results are keyed by that name: `results["Train_YD_Dam_Downstream"]["1h"]`.
 4. **Config**: the notebook loads `data/Train_Overwrite.yml`, updates the experiment, path, and variable keys, and then **writes the file back in place**. That file is therefore both the template and the last-run config. Train/val/test periods, `seq_length: 720`, and the LR schedule live there.
 5. **Train**: `start_run(config_file=...)` creates `data/runs/<target>/<model>/<experiment>_<ddmm_HHMMSS>/`. That directory holds `config.yml`, `model_epochNNN.pt`, `train_data/train_data_scaler.yml`, and `img_log/`. The notebook picks the newest run directory by mtime.
@@ -43,5 +43,5 @@ The notebook runs this flow in order:
 ## Gotchas
 
 - The notebooks build paths relative to their own directory (`Path.cwd()`). The committed `config.yml` files under `data/runs/` and the `Train_Overwrite.yml` template still contain absolute paths from the original machine (`/home/neuralriverops/...`). The notebook overwrites the path keys before each run.
-- `dataset: hourlycsv` is not registered in upstream `neuralhydrology` 1.13.0 (built-ins: `camels_*`, `hourly_camels_us`, `generic`, `lamah_*`, `caravan`). `start_run` fails unless a custom dataset class is registered with `neuralhydrology.datasetzoo.register_dataset("hourlycsv", ...)`.
+- `dataset: hourlycsv` only exists in the fork, not in upstream PyPI `neuralhydrology`. With an upstream install, `start_run` fails on an unknown dataset, so install from the fork (as `binder/environment.yml` does).
 - `data/runs/` contains committed example run outputs, including `.pt` weights. New training runs add more timestamped directories there.

@@ -18,9 +18,10 @@ dependencies:
   - numba
   - tqdm
   - tensorboard
+  - jupyter-server-proxy  # MyBinder에서 TensorBoard(포트 6006)를 /proxy/6006/ 경로로 열기 위해 필요
   - pip
   - pip:
     - --extra-index-url https://download.pytorch.org/whl/cpu
     - torch
     - lightning
-    - neuralhydrology==1.13.0
+    - git+https://github.com/realtime-dam-operation-using-AI/neuralhydrology.git
