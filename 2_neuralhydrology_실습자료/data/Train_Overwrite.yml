@@ -2,8 +2,8 @@ batch_size: 256
 clip_gradient_norm: 1
 clip_targets_to_zero:
 - 3004630_hwl
-data_dir: "/home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_\uC2E4\
-  \uC2B5\uC790\uB8CC/data/training_data"
+data_dir: "/home/hydro/research/edu/hydro_practices/2_neuralhydrology_\uC2E4\uC2B5\
+  \uC790\uB8CC/data/training_data"
 dataset: hourlycsv
 device: cuda:0
 dynamic_inputs:
@@ -32,23 +32,23 @@ optimizer: Adam
 output_activation: linear
 output_dropout: 0.4
 predict_last_n: 1
-run_dir: "/home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_\uC2E4\
-  \uC2B5\uC790\uB8CC/data/runs/3004630_hwl/cudalstm"
+run_dir: "/home/hydro/research/edu/hydro_practices/2_neuralhydrology_\uC2E4\uC2B5\uC790\
+  \uB8CC/data/runs/3004630_hwl/cudalstm"
 save_weights_every: 5
 seq_length: 720
 target_variables:
 - 3004630_hwl
-test_basin_file: "/home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_\uC2E4\
+test_basin_file: "/home/hydro/research/edu/hydro_practices/2_neuralhydrology_\uC2E4\
   \uC2B5\uC790\uB8CC/data/Train_YD_Dam_Downstream.txt"
 test_end_date: 30/09/2023
 test_start_date: 01/10/2021
-train_basin_file: "/home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_\uC2E4\
+train_basin_file: "/home/hydro/research/edu/hydro_practices/2_neuralhydrology_\uC2E4\
   \uC2B5\uC790\uB8CC/data/Train_YD_Dam_Downstream.txt"
 train_end_date: 30/09/2020
 train_start_date: 01/10/2014
 validate_every: 5
 validate_n_random_basins: 1
-validation_basin_file: "/home/neuralriverops/neuralriverops/hydro_practices/2_neuralhydrology_\uC2E4\
+validation_basin_file: "/home/hydro/research/edu/hydro_practices/2_neuralhydrology_\uC2E4\
   \uC2B5\uC790\uB8CC/data/Train_YD_Dam_Downstream.txt"
 validation_end_date: 30/09/2021
 validation_start_date: 01/10/2020

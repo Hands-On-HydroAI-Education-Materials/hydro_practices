@@ -1,0 +1,48 @@
+2026-10-28 11:34:30,936: Logging to /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113430/output.log initialized.
+2026-10-28 11:34:30,937: ### Folder structure created at /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113430
+2026-10-28 11:34:30,937: ### Run configurations for 3004630_hwl_cudalstm
+2026-10-28 11:34:30,938: batch_size: 256
+2026-10-28 11:34:30,938: clip_gradient_norm: 1
+2026-10-28 11:34:30,938: clip_targets_to_zero: ['3004630_hwl']
+2026-10-28 11:34:30,939: data_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/training_data
+2026-10-28 11:34:30,939: dataset: hourlycsv
+2026-10-28 11:34:30,939: device: cuda:0
+2026-10-28 11:34:30,939: dynamic_inputs: ['yd_hoflw', '3003430_hrf']
+2026-10-28 11:34:30,940: epochs: 5
+2026-10-28 11:34:30,940: experiment_name: 3004630_hwl_cudalstm
+2026-10-28 11:34:30,940: forcings: ['hourly']
+2026-10-28 11:34:30,940: head: regression
+2026-10-28 11:34:30,941: hidden_size: 128
+2026-10-28 11:34:30,941: initial_forget_bias: 3
+2026-10-28 11:34:30,941: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2026-10-28 11:34:30,942: log_interval: 5
+2026-10-28 11:34:30,942: log_n_figures: 1
+2026-10-28 11:34:30,942: log_tensorboard: False
+2026-10-28 11:34:30,942: loss: MSE
+2026-10-28 11:34:30,943: metrics: ['NSE']
+2026-10-28 11:34:30,943: model: cudalstm
+2026-10-28 11:34:30,943: num_workers: 0
+2026-10-28 11:34:30,944: optimizer: Adam
+2026-10-28 11:34:30,944: output_activation: linear
+2026-10-28 11:34:30,944: output_dropout: 0.4
+2026-10-28 11:34:30,944: predict_last_n: 1
+2026-10-28 11:34:30,944: run_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113430
+2026-10-28 11:34:30,945: save_weights_every: 5
+2026-10-28 11:34:30,945: seq_length: 720
+2026-10-28 11:34:30,945: target_variables: ['3004630_hwl']
+2026-10-28 11:34:30,945: test_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:34:30,946: test_end_date: 2023-09-30 00:00:00
+2026-10-28 11:34:30,946: test_start_date: 2021-10-01 00:00:00
+2026-10-28 11:34:30,946: train_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:34:30,947: train_end_date: 2020-09-30 00:00:00
+2026-10-28 11:34:30,947: train_start_date: 2014-10-01 00:00:00
+2026-10-28 11:34:30,947: validate_every: 5
+2026-10-28 11:34:30,947: validate_n_random_basins: 1
+2026-10-28 11:34:30,948: validation_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:34:30,948: validation_end_date: 2021-09-30 00:00:00
+2026-10-28 11:34:30,948: validation_start_date: 2020-10-01 00:00:00
+2026-10-28 11:34:30,948: number_of_basins: 1
+2026-10-28 11:34:30,949: train_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113430/train_data
+2026-10-28 11:34:30,949: img_log_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113430/img_log
+2026-10-28 11:34:30,954: ### Device cuda:0 will be used for training
+2026-10-28 11:34:30,954: Loading basin data into xarray data set.

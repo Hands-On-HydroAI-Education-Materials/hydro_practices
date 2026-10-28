@@ -1,0 +1,58 @@
+2026-10-28 11:37:31,302: Logging to /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/output.log initialized.
+2026-10-28 11:37:31,303: ### Folder structure created at /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731
+2026-10-28 11:37:31,304: ### Run configurations for 3004630_hwl_cudalstm
+2026-10-28 11:37:31,304: batch_size: 256
+2026-10-28 11:37:31,304: clip_gradient_norm: 1
+2026-10-28 11:37:31,305: clip_targets_to_zero: ['3004630_hwl']
+2026-10-28 11:37:31,305: data_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/training_data
+2026-10-28 11:37:31,305: dataset: hourlycsv
+2026-10-28 11:37:31,305: device: cuda:0
+2026-10-28 11:37:31,306: dynamic_inputs: ['yd_hoflw', '3003430_hrf']
+2026-10-28 11:37:31,306: epochs: 5
+2026-10-28 11:37:31,306: experiment_name: 3004630_hwl_cudalstm
+2026-10-28 11:37:31,306: forcings: ['hourly']
+2026-10-28 11:37:31,307: head: regression
+2026-10-28 11:37:31,307: hidden_size: 128
+2026-10-28 11:37:31,307: initial_forget_bias: 3
+2026-10-28 11:37:31,307: learning_rate: {0: 0.01, 30: 0.005, 40: 0.001}
+2026-10-28 11:37:31,308: log_interval: 5
+2026-10-28 11:37:31,308: log_n_figures: 1
+2026-10-28 11:37:31,308: log_tensorboard: False
+2026-10-28 11:37:31,308: loss: MSE
+2026-10-28 11:37:31,309: metrics: ['NSE']
+2026-10-28 11:37:31,309: model: cudalstm
+2026-10-28 11:37:31,309: num_workers: 0
+2026-10-28 11:37:31,309: optimizer: Adam
+2026-10-28 11:37:31,310: output_activation: linear
+2026-10-28 11:37:31,310: output_dropout: 0.4
+2026-10-28 11:37:31,310: predict_last_n: 1
+2026-10-28 11:37:31,310: run_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731
+2026-10-28 11:37:31,311: save_weights_every: 5
+2026-10-28 11:37:31,311: seq_length: 720
+2026-10-28 11:37:31,311: target_variables: ['3004630_hwl']
+2026-10-28 11:37:31,311: test_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:37:31,312: test_end_date: 2023-09-30 00:00:00
+2026-10-28 11:37:31,312: test_start_date: 2021-10-01 00:00:00
+2026-10-28 11:37:31,312: train_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:37:31,312: train_end_date: 2020-09-30 00:00:00
+2026-10-28 11:37:31,313: train_start_date: 2014-10-01 00:00:00
+2026-10-28 11:37:31,313: validate_every: 5
+2026-10-28 11:37:31,313: validate_n_random_basins: 1
+2026-10-28 11:37:31,314: validation_basin_file: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/Train_YD_Dam_Downstream.txt
+2026-10-28 11:37:31,314: validation_end_date: 2021-09-30 00:00:00
+2026-10-28 11:37:31,314: validation_start_date: 2020-10-01 00:00:00
+2026-10-28 11:37:31,314: number_of_basins: 1
+2026-10-28 11:37:31,315: train_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/train_data
+2026-10-28 11:37:31,315: img_log_dir: /home/hydro/research/edu/hydro_practices/2_neuralhydrology_실습자료/data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/img_log
+2026-10-28 11:37:31,317: ### Device cuda:0 will be used for training
+2026-10-28 11:37:31,317: Loading basin data into xarray data set.
+2026-10-28 11:37:31,391: Create lookup table and convert to pytorch tensor
+2026-10-28 11:37:38,552: Epoch 1 average loss: avg_loss: 0.14710, avg_total_loss: 0.14710
+2026-10-28 11:37:43,241: Epoch 2 average loss: avg_loss: 0.03493, avg_total_loss: 0.03493
+2026-10-28 11:37:48,016: Epoch 3 average loss: avg_loss: 0.03033, avg_total_loss: 0.03033
+2026-10-28 11:37:52,830: Epoch 4 average loss: avg_loss: 0.03025, avg_total_loss: 0.03025
+2026-10-28 11:37:57,777: Epoch 5 average loss: avg_loss: 0.02631, avg_total_loss: 0.02631
+2026-10-28 11:37:58,426: Epoch 5 average validation loss: 0.20433 -- Median validation metrics: avg_loss: 0.20433, NSE: -0.56352
+2026-10-28 11:37:58,499: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/model_epoch005.pt
+2026-10-28 11:38:01,142: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/model_epoch005.pt
+2026-10-28 11:38:01,718: Using the model weights from data/runs/3004630_hwl/cudalstm/3004630_hwl_cudalstm_2810_113731/model_epoch005.pt
