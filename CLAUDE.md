@@ -15,7 +15,7 @@ Hands-on teaching materials (Korean-language) for hydrology + deep learning. It 
 
 ## Dependencies
 
-Two environment files exist, one per hosted launcher (both linked from README badges, both open the repo root in JupyterLab):
+Two environment files exist, one per hosted launcher. Only Binder is linked from the README badges (it opens the repo root in JupyterLab); the notebook.link badges were removed:
 - `binder/environment.yml` (mybinder.org): the real runtime. conda-forge stack plus pip installs of CPU-only `torch` (via `--extra-index-url https://download.pytorch.org/whl/cpu`), `lightning`, and NeuralHydrology from the fork `git+https://github.com/realtime-dam-operation-using-AI/neuralhydrology.git` (not PyPI). Binder has no GPU. `jupyter-server-proxy` is there so the TensorBoard cell in Example-3 can be reached at `<JUPYTERHUB_SERVICE_PREFIX>/proxy/6006/` (the cell sets `TENSORBOARD_PROXY_URL` before `%tensorboard`).
 - `.nblink/environment.yml` (notebook.link): runs in the browser via WebAssembly, using the emscripten-forge channel. PyTorch, Lightning, and NeuralHydrology have no WASM builds, so they are deliberately left out; adding them would break the environment solve. notebook.link is for viewing only.
 
